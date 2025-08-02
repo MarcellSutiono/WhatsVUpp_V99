@@ -1,0 +1,17 @@
+name: Push Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print hello message
+        run: echo "✅ Push ke branch 'main' terdeteksi!"
+
+      - name: Show GitHub actor
+        run: echo "👤 Pushed by ${{ github.actor }}"
